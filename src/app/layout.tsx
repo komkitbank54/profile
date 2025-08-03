@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
 import "./globals.css";
 
 const geistSans = Geist({
@@ -17,8 +16,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+
   title: "Komkit's Profile",
   description: "Created by Komkit",
+
 };
 
 export default function RootLayout({
@@ -31,9 +32,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+
         <Navbar />
         {children}
         <Footer />
+
       </body>
     </html>
   );

@@ -9,38 +9,45 @@ import {
 } from "react-icons/ri";
 import { GoPackage as Projects } from "react-icons/go";
 
+const navBtnClass =
+    "text-white hover:text-gray-300 hover:cursor-pointer";
+const iconClass =
+    "inline w-7 h-7 mr-1 mb-0.5";
+const socialIconClass =
+    "inline w-7 h-7 mb-0.5 text-white hover:text-gray-300 hover:cursor-pointer";
+
 export default function Navbar() {
     return (
         <nav className="fixed top-0 left-0 w-full bg-black shadow-md z-50">
-            <div className="max-w-5xl flex items-center justify-between px-4 py-3 mx-auto">
-                <div className="text-xl font-bold">
+            <div className="max-w-[1440px] flex items-center justify-between px-4 py-3 mx-auto">
+                <div className="text-[2rem] font-bold">
                     <Link href="/">Komkit</Link>
                 </div>
-                <div className="right-0 space-x-4 hidden md:flex">
-                    <button className="text-white hover:text-gray-300 hover:cursor-pointer">
-                        <Home className="inline w-5 h-5 mr-1 mb-0.5" />
+                <div className="space-x-8 hidden md:flex text-[1.5rem]">
+                    <button className={navBtnClass}>
+                        <Home className={iconClass} />
                         Home
                     </button>
-                    <button className="text-white hover:text-gray-300 hover:cursor-pointer">
-                        <About className="inline w-5 h-5 mr-1 mb-0.5" />
+                    <button className={navBtnClass}>
+                        <About className={iconClass} />
                         About
                     </button>
-                    <button className="text-white hover:text-gray-300 hover:cursor-pointer">
-                        <Skills className="inline w-5 h-5 mr-1 mb-0.5" />
+                    <button className={navBtnClass}>
+                        <Skills className={iconClass} />
                         Skills
                     </button>
-                    <button className="text-white hover:text-gray-300 hover:cursor-pointer">
-                        <Projects className="inline w-5 h-5 mr-1 mb-0.5" />
+                    <button className={navBtnClass}>
+                        <Projects className={iconClass} />
                         Projects
                     </button>
-                    <button className="text-white hover:text-gray-300 hover:cursor-pointer">
-                        <Contact className="inline w-5 h-5 mr-1 mb-0.5" />
+                    <button className={navBtnClass}>
+                        <Contact className={iconClass} />
                         Contact
                     </button>
                 </div>
                 <div className="flex space-x-4">
-                    <Github className="inline w-5 h-5 mb-0.5 text-white hover:text-gray-300 hover:cursor-pointer" />
-                    <Linkedin className="inline w-5 h-5 mb-0.5 text-white hover:text-gray-300 hover:cursor-pointer" />
+                    <Github className={socialIconClass} />
+                    <Linkedin className={socialIconClass} />
                 </div>
                 {/* TODO: Hamburger for mobile */}
             </div>

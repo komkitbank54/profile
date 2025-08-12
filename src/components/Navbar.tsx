@@ -26,6 +26,13 @@ const socialLinks = [
   { href: "https://linkedin.com/in/yourusername", Icon: Linkedin },
 ];
 
+const navBtnClass =
+    "text-white hover:text-gray-300 hover:cursor-pointer";
+const iconClass =
+    "inline w-7 h-7 mr-1 mb-0.5";
+const socialIconClass =
+    "inline w-7 h-7 mb-0.5 text-white hover:text-gray-300 hover:cursor-pointer";
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 

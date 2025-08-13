@@ -26,13 +26,6 @@ const socialLinks = [
   { href: "https://linkedin.com/in/yourusername", Icon: Linkedin },
 ];
 
-const navBtnClass =
-    "text-white hover:text-gray-300 hover:cursor-pointer";
-const iconClass =
-    "inline w-7 h-7 mr-1 mb-0.5";
-const socialIconClass =
-    "inline w-7 h-7 mb-0.5 text-white hover:text-gray-300 hover:cursor-pointer";
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -43,20 +36,20 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="text-2xl font-extrabold text-white hover:text-gray-200 transition-colors"
+          className="text-[2.4rem] font-extrabold text-white hover:text-gray-200 transition-colors"
         >
           Komkit
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex space-x-6 text-[1.6rem]">
           {navItems.map(({ href, label, Icon }) => (
             <Link
               key={label}
               href={href}
               className="group flex items-center text-white transition-all duration-200 hover:text-cyan-300"
             >
-              <Icon className="w-5 h-5 mr-1 transition-transform duration-300 group-hover:scale-110" />
+              <Icon className="w-7 h-7 mr-1 transition-transform duration-300 group-hover:scale-120"/>
               <span className="relative">
                 {label}
                 <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-cyan-300 transition-all duration-300 group-hover:w-full" />
@@ -73,9 +66,9 @@ export default function Navbar() {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-cyan-300 transition-transform duration-300 hover:scale-110"
+              className="text-white hover:text-cyan-300 transition-transform duration-300 hover:scale-120"
             >
-              <Icon className="w-5 h-5" />
+              <Icon className="w-7 h-7" />
             </Link>
           ))}
         </div>
